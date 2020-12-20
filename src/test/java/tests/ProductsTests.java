@@ -2,7 +2,7 @@ package tests;
 
 import org.testng.annotations.Test;
 
-public class ProductsTests extends BaseTest{
+public class ProductsTests extends BaseTest {
 
     @Test
     public void addProductToCartTest() {

@@ -11,6 +11,7 @@ public class LoginPage extends BasePage{
 
     public static final By USERNAME_INPUT = By.xpath("//*[@data-test='username']");
     public static final By PASSWORD_INPUT = By.xpath("//*[@data-test='password']");
+    //TODO: move below constants to Test class
     public final String USERNAME = "standard_user";
     public final String PASSWORD = "secret_sauce";
     public final String URL = "https://www.saucedemo.com/index.html";
