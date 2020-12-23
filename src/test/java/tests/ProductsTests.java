@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ProductsTests extends BaseTest {
@@ -9,6 +10,8 @@ public class ProductsTests extends BaseTest {
         loginPage.openPage();
         loginPage.login(loginPage.USERNAME, loginPage.PASSWORD);
         productsPage.addProductToCart("Sauce Labs Fleece Jacket");
-        cartPage.openPage();
+        productsPage.openPage();
+        productsPage.waitForPageOpened();
+        Assert.assertTrue(productsPage.isPageOpened());
     }
 }
