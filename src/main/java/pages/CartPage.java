@@ -16,8 +16,9 @@ public class CartPage extends BasePage {
     }
 
     @Override
-    public void waitForPageOpened() {
+    public CartPage waitForPageOpened() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(CHECKOUT_BUTTON));
+        return this;
     }
 
     public CartPage openPage() {

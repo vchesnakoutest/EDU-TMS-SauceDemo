@@ -15,7 +15,7 @@ abstract class BasePage implements Constants {
         PageFactory.initElements(driver, this);
     }
 
-    abstract void waitForPageOpened();
+    abstract BasePage waitForPageOpened();
 
     public void openPage(String url) {
         driver.get(url);

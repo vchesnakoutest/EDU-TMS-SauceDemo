@@ -16,12 +16,13 @@ public class ProductsPage extends BasePage {
     }
 
     @Override
-    public void waitForPageOpened() {
+    public ProductsPage waitForPageOpened() {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(PRODUCT_LABEL));
         } catch (TimeoutException exception) {
             Assert.fail(String.format("Products page in not loaded! Locator: '%s' was not found!", PRODUCT_LABEL));
         }
+        return this;
     }
 
     public boolean isPageOpened() {

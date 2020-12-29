@@ -18,8 +18,8 @@ public class LoginPageFactory extends BasePage {
     }
 
     @Override
-    void waitForPageOpened() {
-
+    LoginPageFactory waitForPageOpened() {
+        return this;
     }
 
     /**

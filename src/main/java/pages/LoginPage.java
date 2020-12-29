@@ -13,8 +13,8 @@ public class LoginPage extends BasePage{
     }
 
     @Override
-    void waitForPageOpened() {
-
+    LoginPage waitForPageOpened() {
+        return this;
     }
 
     /**
