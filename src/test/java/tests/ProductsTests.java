@@ -7,11 +7,12 @@ public class ProductsTests extends BaseTest {
 
     @Test
     public void addProductToCartTest() {
-        loginPage.openPage();
-        loginPage.login(loginPage.USERNAME, loginPage.PASSWORD);
-        productsPage.addProductToCart("Sauce Labs Fleece Jacket");
-        productsPage.openPage();
-        productsPage.waitForPageOpened();
-        Assert.assertTrue(productsPage.isPageOpened());
+        loginPageFactory.openPage();
+        loginPageFactory
+                .login(USERNAME, PASSWORD)
+                .addProductToCart("Sauce Labs Fleece Jacket");
+        cartPage.openPage()
+                .waitForPageOpened();
+        Assert.assertTrue(cartPage.isProductAddedToCart("Sauce Labs Fleece Jacket", "1", "49.99"));
     }
 }
