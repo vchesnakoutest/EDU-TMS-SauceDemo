@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class ProductsTests extends BaseTest {
 
-    @Test(invocationCount = 4, threadPoolSize = 4)
+    @Test()
     public void addProductToCartChainTest() {
         loginPage
                 .openPage()
