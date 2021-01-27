@@ -21,8 +21,6 @@ public class BaseTest implements TestConstants {
     public void initTest() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-//        WebDriverManager.firefoxdriver().setup();
-//        driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         loginPage = new LoginPage(driver);

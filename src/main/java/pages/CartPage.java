@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class CartPage extends BasePage{
+
     public static final String PRODUCT_NAME = "//*[@class = 'inventory_item_name' and contains(text(), '%s')]";
     public static final String ANCESTOR_CART_ITEM = "/ancestor::*[@class='cart_item']";
     public static final String PRODUCT_QUANTITY = PRODUCT_NAME + ANCESTOR_CART_ITEM + "//*[@class = 'cart_quantity']";

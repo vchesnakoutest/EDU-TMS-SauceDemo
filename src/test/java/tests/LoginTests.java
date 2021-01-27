@@ -6,7 +6,7 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void demoPageFactoryTest() {
-        loginPageFactory.demoWithoutPageFactoryTest();
+//        loginPageFactory.demoWithoutPageFactoryTest();
 //        loginPageFactory.demoWithPageFactoryTest();
     }
 }
