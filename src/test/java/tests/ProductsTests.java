@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.PropReader;
 
 public class ProductsTests extends BaseTest {
 
@@ -9,7 +10,7 @@ public class ProductsTests extends BaseTest {
     public void addProductToCartChainTest() {
         loginPage
                 .openPage()
-                .login(System.getenv("username"), System.getenv("password"))
+                .login(System.getenv().getOrDefault("username", PropReader.getProperty("username")), System.getenv().getOrDefault("password", PropReader.getProperty("password")))
                 .addProductToCart("Sauce Labs Fleece Jacket");
         productsPage.openPage();
         productsPage.waitForPageOpened();
