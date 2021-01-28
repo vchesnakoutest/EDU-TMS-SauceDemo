@@ -9,7 +9,7 @@ public class ProductsTests extends BaseTest {
     public void addProductToCartChainTest() {
         loginPage
                 .openPage()
-                .login(USERNAME, PASSWORD)
+                .login(System.getenv("username"), System.getenv("password"))
                 .addProductToCart("Sauce Labs Fleece Jacket");
         productsPage.openPage();
         productsPage.waitForPageOpened();
