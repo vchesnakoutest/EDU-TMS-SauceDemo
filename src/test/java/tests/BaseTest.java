@@ -1,5 +1,6 @@
 package tests;
 
+import org.openqa.selenium.chrome.ChromeOptions;
 import test_data.TestConstants;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +21,11 @@ public class BaseTest implements TestConstants {
     @BeforeMethod
     public void initTest() {
         WebDriverManager.chromedriver().version("88.0.4324.27").setup();
-        driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        if (System.getProperty("headless").equals("true")) {
+            chromeOptions.addArguments("headless");
+        }
+        driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         loginPage = new LoginPage(driver);
